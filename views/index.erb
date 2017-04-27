@@ -1,0 +1,44 @@
+<h1>add new contact</h1>
+<div class="form-group">
+  <form action="/contacts/create" method="post">
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" name="contact[]contact[name]" />
+    </div>
+    <div class="form-group">
+      <label>Email</label>
+      <input type="text" name="contact[]contact[email]" />
+    </div>
+    <div class="form-group">
+      <label>Phone Number</label>
+      <input type="text" name="contact[]phone[number]" />
+    </div>
+    <div class="form-group">
+      <label>Type (Office/Mobile)</label>
+      <input type="text" name="contact[]phone[type]" />
+    </div>
+    <div class="form-group">
+      <label>Street</label>
+      <input type="text" name="contact[]address[street]" />
+    </div>
+    <div class="form-group">
+      <label>City</label>
+      <input type="text" name="contact[]address[city]" />
+    </div>
+    <div class="form-group">
+      <label>State</label>
+      <input type="text" name="contact[]address[state]" />
+    </div>
+    <div class="form-group">
+      <label>Zip Code</label>
+      <input type="text" name="contact[]address[zip]" />
+    </div>
+    <div class="form-group">
+      <label>Type (Home/Office)</label>
+      <input type="text" name="contact[]address[type]" />
+    </div>
+    <button type="submit" name="button" class="btn btn-success">Add</button>
+  </form>
+</div>
+
+<a href="/contacts" class="btn btn-info">Contacts</a>

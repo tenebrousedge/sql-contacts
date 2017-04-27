@@ -1,0 +1,26 @@
+<!-- => [{:id=>"6ee85bd1-6b12-485f-b67f-2f73316e5076",
+  :name=>"test",
+  :email=>"test@test.com",
+  :contact_id=>"edfc98d0-3b62-4ed1-8c69-c79f79dd00e0",
+  :street=>"4th ave",
+  :city=>"portland",
+  :state=>"or",
+  :zip=>"97201",
+  :type=>"office",
+  :number=>"55555555"}] -->
+
+<% @contacts.each do |contact| %>
+<div class="well">
+  <%= <<-TEXT
+<p>
+#{contact.fetch(:name)}<br>
+#{contact.fetch(:street)}<br>
+#{contact.fetch(:city)}, #{contact.fetch(:state)} #{contact.fetch(:zip)}<br>
+#{contact.fetch(:number)}
+</p>
+TEXT
+%>
+</div>
+<% end %>
+
+<a href="/" class="btn btn-success">Add New Contact</a>
